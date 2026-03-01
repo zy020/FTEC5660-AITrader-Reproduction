@@ -19,7 +19,7 @@ The native GLM-4.6 model struggled with raw financial data. I implemented a scop
 ## 3. Prerequisites
 * **Python:** 3.10+
 * **API Keys Required:**
-  * **OpenAI API:** For AI model inference (or DeepSeek/GLM compatible proxies).
+  * **OpenAI API:** For AI model inference.
   * **Alpha Vantage:** For NASDAQ-100 and cryptocurrency data.
   * **Jina AI:** For market information search.
 
