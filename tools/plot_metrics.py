@@ -18,23 +18,22 @@ sns.set_context("notebook", font_scale=1.1)
 
 # Agent display names and colors
 AGENT_MAPPING = {
-    'deepseek-chat-v3.1': 'DeepSeek-v3.1',
-    'MiniMax-M2': 'MiniMax-M2',
-    'claude-3.7-sonnet': 'Claude-3.7-Sonnet',
-    'gpt-5': 'GPT-5',
-    'qwen3-max': 'Qwen3-Max',
-    'gemini-2.5-flash': 'Gemini-2.5-Flash'
+    'deepseek-v3.1-terminus': 'Deepseek-v3.1-terminus',
+    'GLM-4.6': 'GLM4.6',
+    'GLM-4.6-modified': 'GLM4.6-modified',
 }
 
 # Custom color palette for agents
 AGENT_COLORS = {
-    'DeepSeek-v3.1': '#FF6B6B',      # Red
-    'MiniMax-M2': '#4ECDC4',         # Teal
-    'Claude-3.7-Sonnet': '#45B7D1',  # Blue
-    'GPT-5': '#96CEB4',              # Green
-    'Qwen3-Max': '#FFEAA7',          # Yellow
-    'Gemini-2.5-Flash': '#DFE6E9'    # Gray
+    'Deepseek-v3.1-terminus': '#FF6B6B',      # Red
+    'GLM4.6': '#4ECDC4',         # Teal
+    'GLM4.6-modified': '#45B7D1',  # Blue
 }
+'''
+'GPT-5': '#96CEB4',              # Green
+'Qwen3-Max': '#FFEAA7',          # Yellow
+'Gemini-2.5-Flash': '#DFE6E9'    # Gray
+'''
 
 
 def load_portfolio_data(agent_dir):
@@ -326,7 +325,7 @@ def main():
         print("PROCESSING U.S. MARKET VISUALIZATIONS")
         print("=" * 70)
 
-        us_data_dir = Path('data/agent_data')
+        us_data_dir = Path('../data/agent_data')
         agent_data = {}
 
         for agent_dir in sorted(us_data_dir.iterdir()):
@@ -348,7 +347,7 @@ def main():
 
         # Load baseline
         print("📊 Loading QQQ baseline...")
-        qqq_file = Path('data/daily_prices_QQQ.json')
+        qqq_file = Path('../data/daily_prices_QQQ.json')
         baseline_data = None
 
         if qqq_file.exists():
@@ -373,7 +372,7 @@ def main():
         print("PROCESSING A-SHARE MARKET VISUALIZATIONS")
         print("=" * 70)
 
-        astock_data_dir = Path('data/agent_data_astock')
+        astock_data_dir = Path('../data/agent_data_astock')
         agent_data = {}
 
         for agent_dir in sorted(astock_data_dir.iterdir()):
@@ -395,7 +394,7 @@ def main():
 
         # Load baseline
         print("📊 Loading SSE-50 baseline...")
-        sse_file = Path('data/A_stock/index_daily_sse_50.json')
+        sse_file = Path('../data/A_stock/index_daily_sse_50.json')
         baseline_data = None
 
         if sse_file.exists():
@@ -423,7 +422,7 @@ def main():
         print("PROCESSING CRYPTO MARKET VISUALIZATIONS")
         print("=" * 70)
 
-        crypto_data_dir = Path('data/agent_data_crypto')
+        crypto_data_dir = Path('../data/agent_data_crypto')
         agent_data = {}
 
         for agent_dir in sorted(crypto_data_dir.iterdir()):
@@ -445,7 +444,7 @@ def main():
 
         # Load baseline (using crypto index if available)
         print("📊 Loading Crypto baseline...")
-        crypto_index_file = Path('data/crypto/CD5_crypto_index.json')
+        crypto_index_file = Path('../data/crypto/CD5_crypto_index.json')
         baseline_data = None
 
         if crypto_index_file.exists():

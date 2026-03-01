@@ -48,7 +48,7 @@ def get_market_type() -> str:
     """
     智能获取市场类型，支持多种检测方式：
     1. 优先从配置中读取 MARKET
-    2. 如果未设置，则根据 LOG_PATH 推断（agent_data_astock -> cn, agent_data_crypto -> crypto, agent_data -> us）
+    2. 如果未设置，则根据 LOG_PATH 推断(agent_data_astock -> cn, agent_data_crypto -> crypto, agent_data -> us)
     3. 最后默认为 us
 
     Returns:
