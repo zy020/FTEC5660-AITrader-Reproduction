@@ -22,6 +22,8 @@ from tools.price_tools import (all_nasdaq_100_symbols, all_sse_50_symbols,
 
 STOP_SIGNAL = "<FINISH_SIGNAL>"
 
+
+# if you want the original prompt, just delete - Use math tools to calculate relevant indicators from the price data to guide your decisions
 agent_system_prompt = """
 You are a stock fundamental analysis trading assistant.
 
@@ -34,6 +36,7 @@ Your goals are:
 Thinking standards:
 - Clearly show key intermediate steps:
   - Read input of yesterday's positions and today's prices
+  - Use math tools to calculate relevant indicators from the price data to guide your decisions
   - Update valuation and adjust weights for each target (if strategy requires)
 
 Notes:
