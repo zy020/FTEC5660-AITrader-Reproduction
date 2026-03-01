@@ -31,3 +31,7 @@ The native GLM-4.6 model struggled with raw financial data. I implemented a scop
 ```bash
 git clone [https://github.com/HKUDS/AI-Trader.git](https://github.com/HKUDS/AI-Trader.git)
 cd AI-Trader
+
+Step 2: Install Dependencies
+```bash
+pip install -r requirements.txt
