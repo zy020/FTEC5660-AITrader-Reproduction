@@ -28,9 +28,11 @@ The native GLM-4.6 model struggled with raw financial data. I implemented a scop
 ## 4. Installation Steps
 
 **Step 1: Clone the Project**
+<pre>
 ```bash
 git clone [https://github.com/HKUDS/AI-Trader.git](https://github.com/HKUDS/AI-Trader.git)
 cd AI-Trader
+</pre>
 
 Step 2: Install Dependencies
 ```bash
